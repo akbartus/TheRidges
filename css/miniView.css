@@ -1,0 +1,230 @@
+@CHARSET "UTF-8";
+
+/* Tooltip Borderless */
+.tooltipster-sidetip.tooltipster-borderless .tooltipster-box {
+    border: none;
+    background: rgb(255 255 255 / 0.9);
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-box {
+    margin-top: 8px;
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-box {
+    margin-right: 8px;
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-box {
+    margin-left: 8px;
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-box {
+    margin-bottom: 8px;
+}
+
+.tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow {
+    height: 8px;
+    margin-left: -8px;
+    width: 16px;
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow,
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow {
+    height: 16px;
+    margin-left: 0;
+    margin-top: -8px;
+    width: 8px;
+}
+
+.tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow-background {
+    display: none;
+}
+
+.tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow-border {
+    border: 8px solid transparent;
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-border {
+    border-bottom-color: rgb(144 143 156 / 1);
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow-border {
+
+    border-left-color: rgb(144 143 156 / 1);
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow-border {
+
+    border-right-color: rgb(144 143 156 / 1);
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-arrow-border {
+
+    border-top-color: rgb(144 143 156 / 1);
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-uncropped {
+    top: -8px;
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow-uncropped {
+    left: -8px;
+}
+
+/* Tooltip Additional Settings */
+
+.tooltip_templates {
+    display: none;
+}
+
+.tooltip {
+    cursor: pointer;
+}
+
+.tooltipster-custom,
+.tooltipster-content {
+    border: 1px solid #908f9c;
+
+}
+
+#tooltip_content {
+    color: #000;
+}
+
+/* Tooltip Content */
+.icons {
+    width: 80px !important;
+    display:block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.tooltip-title {
+    text-align: center;
+    display:block;
+    font-size:20px;
+    margin: 10px 0px;
+}
+.tooltip-link {
+    cursor: pointer;
+    font-weight: bolder;
+    font-size:18px;
+    text-align: center;
+}
+/* ----- */
+.borderDiv {
+    width: 100%;
+    height: 700px;
+    border: 1px solid;
+    overflow: hidden;
+
+    top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mainContainer {
+    width: 2000px;
+    height: 1500px;
+    background-color: #bad6cb;
+    position: relative;
+}
+
+#view {
+    left: -250px;
+    top: -300px;
+}
+
+/* Tooltip */
+
+/* minimap */
+#minimap #selectWin {
+    z-index: 9999;
+}
+
+.selectionWin {}
+
+#minimap #selectWin .selectionWin {
+    position: absolute;
+    background-color: #5d5d5d;
+    opacity: 0.5;
+}
+
+#minimap,
+#minimap #selectWin,
+#minimap #miniview {
+    position: fixed;
+    bottom: 10%;
+    right: 2%;
+    overflow: hidden
+}
+
+#miniview {
+    border: 2px solid #000;
+}
+
+#minimap .mainContainer {
+    transform-origin: left top 0;
+    background-color: #d2ddc6;
+}
+
+#kennedyMuseum {
+    cursor: pointer;
+}
+
+/* Photo Background, 360 photos */
+#mainScene {
+    display: none;
+}
+
+#locationName {
+    color: #fff;
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    left: 5%;
+    width: 30%;
+    z-index: 2;
+
+}
+
+#locationMap {
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    z-index: 2;
+    width: 200px;
+    object-fit: cover;
+    cursor: pointer;
+
+}
+
+
+/* Responsiveness */
+@media only screen and (max-width: 500px) {
+
+    #view {
+        left: -600px;
+        top: -300px;
+    }
+
+    #minimap,
+    #minimap #selectWin,
+    #minimap #miniview {
+        position: fixed;
+        bottom: 5% !important;
+        right: 5% !important;
+        overflow: hidden
+    }
+
+    #locationName {
+        bottom: 5%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #view {
+        left: -600px;
+        top: -400px;
+    }
+}
