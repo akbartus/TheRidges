@@ -160,6 +160,8 @@ function startTour() {
 			theme: 'tooltipster-borderless',
 			contentAsHTML: true,
 			trackOrigin: true,
+			//viewportAware: true,
+			//repositionOnScroll: true,
 			trigger: 'click',
 			interactive: true
 		});
@@ -176,6 +178,7 @@ function startTour() {
 	let mainScene = document.getElementById('mainScene');
 	let kennedy = document.getElementById('kennedy');
 	let miniMap = document.getElementById("BackToMainfromMiniMap");
+	let backToMap2 = document.getElementById("backToMap2");
 	let photoBackground = document.getElementById('photoBackground');
 
 
@@ -193,6 +196,7 @@ function startTour() {
 		miniMap.setAttribute('src', "img/kennedyMiniMap.jpg");
 		// set border to location map
 		miniMap.setAttribute('style', "width:200px; height:150px;");
+		backToMap2.setAttribute('style', "display:block;");
 		// hide tooltip
 		$('.tooltip').tooltipster('hide');
 	});
@@ -264,6 +268,7 @@ function startTour() {
 		miniMap.setAttribute('src', "img/building13MiniMap.jpg");
 		// set border to location map
 		miniMap.setAttribute('style', "width:200px; height:150px;");
+		backToMap2.setAttribute('style', "display:block;");
 		// hide tooltip
 		$('.tooltip').tooltipster('hide');
 	});
@@ -300,6 +305,7 @@ function startTour() {
 		miniMap.setAttribute('src', "img/building14MiniMap.jpg");
 		// set border to location map
 		miniMap.setAttribute('style', "width:200px; height:150px;");
+		backToMap2.setAttribute('style', "display:block;");
 		// hide tooltip
 		$('.tooltip').tooltipster('hide');
 	});
@@ -341,6 +347,7 @@ function startTour() {
 		miniMap.setAttribute('src', "img/building18MiniMap.jpg");
 		// set border to location map
 		miniMap.setAttribute('style', "width:200px; height:150px;");
+		backToMap2.setAttribute('style', "display:block;");
 		// hide tooltip
 		$('.tooltip').tooltipster('hide');
 	});
@@ -376,7 +383,16 @@ function startTour() {
 		kennedy.style.display = "none";
 		building13.style.display = "none";
 
+	});
 
+	document.getElementById("backToMap2").addEventListener("click", function () {
+		// hide aframe scene
+		mainScene.style.display = "none";
+		// hide location map
+		backToMap2.setAttribute('style', "display: none;");
+		// hide location names
+		kennedy.style.display = "none";
+		building13.style.display = "none";
 
 	});
 }

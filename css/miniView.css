@@ -8,7 +8,7 @@
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-box {
-    margin-top: 8px;
+    
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-box {
@@ -20,13 +20,14 @@
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-box {
-    margin-bottom: 8px;
+    
 }
 
 .tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow {
     height: 8px;
     margin-left: -8px;
     width: 16px;
+    margin-top: -8px;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow,
@@ -35,6 +36,7 @@
     margin-left: 0;
     margin-top: -8px;
     width: 8px;
+    margin-right: -8px;
 }
 
 .tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow-background {
@@ -116,13 +118,14 @@
     width: 250px;
     color: #fff;
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 18px;
+    line-height: 20px;
 }
 
 .tooltip-content-credit {
-  
     font-size: 18px; /* font usage */
     line-height: 20px;
+    font-style: italic;
 }
 .tooltip-image {
     width: 250px;
@@ -159,11 +162,11 @@
 /* ----- */
 .borderDiv {
     width: 100%;
-    height: 700px;
+    height: 100%;
     border: 1px solid;
     overflow: hidden;
 
-    top: 20px;
+    
     position: relative;
     overflow: hidden;
 }
@@ -171,7 +174,6 @@
 .mainContainer {
     width: 2000px;
     height: 1500px;
-    background-color: #bad6cb;
     position: relative;
 }
 
@@ -181,6 +183,81 @@
 }
 
 /* Tooltip */
+
+
+/* Menu */
+.burger, .burger2, .burger3, .burger4  {
+    display: inline-block;
+    border: 0;
+    background: none;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    border-bottom: 4px solid currentColor;
+    width: 20px;
+    transition: border-bottom 1s ease-in-out;
+    -webkit-transition: border-bottom 1s ease-in-out;
+    margin-left: 5%;
+    z-index:3;
+  }
+  .burger::-moz-focus-inner, .burger2::-moz-focus-inner, .burger3::-moz-focus-inner, .burger4::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+  .burger:before,  .burger2:before, .burger3:before, .burger4:before {
+    content: "";
+    display: block;
+    border-bottom: 4px solid currentColor;
+    width: 100%;
+    margin-bottom: 5px;
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  }
+  .burger:after, .burger2:after, .burger3:after, .burger4:after {
+    content: "";
+    display: block;
+    border-bottom: 4px solid currentColor;
+    width: 100%;
+    margin-bottom: 5px;
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  }
+  
+  .burger-check, .burger-check2, .burger-check3, .burger-check4 {
+    display: none;
+  }
+  
+  .burger-check:checked ~ .burger, .burger-check2:checked ~ .burger2, .burger-check3:checked ~ .burger3, .burger-check4:checked ~ .burger4 {
+    border-bottom: 4px solid transparent;
+    transition: border-bottom 0.8s ease-in-out;
+    -webkit-transition: border-bottom 0.8s ease-in-out;
+  }
+  .burger-check:checked ~ .burger:before, .burger-check2:checked ~ .burger2:before,  .burger-check3:checked ~ .burger3:before, .burger-check4:checked ~ .burger4:before {
+    transform: rotate(-405deg) translateY(1px) translateX(-3px);
+    -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  }
+  .burger-check:checked ~ .burger:after, .burger-check2:checked ~ .burger2:after,  .burger-check3:checked ~ .burger3:after, .burger-check4:checked ~ .burger4:after {
+    transform: rotate(405deg) translateY(-4px) translateX(-5px);
+    -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  }
+  
+  .navigation, .navigation2, .navigation3, .navigation4 {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  .burger-check:checked ~ .navigation,  .burger-check2:checked ~ .navigation2,  .burger-check3:checked ~ .navigation3,  .burger-check4:checked ~ .navigation4 {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+
+
 
 /* minimap */
 #minimap #selectWin {
@@ -199,7 +276,7 @@
 #minimap #selectWin,
 #minimap #miniview {
     position: fixed;
-    bottom: 10%;
+    top: 5%;
     right: 2%;
     overflow: hidden
 }
@@ -226,16 +303,15 @@
     color: #fff;
     display: none;
     position: fixed;
-    bottom: 10%;
-    left: 5%;
-    width: 30%;
+    bottom: 5%;
+    left: 5px;
     z-index: 2;
 
 }
 
 #BackToMainfromMiniMap {
     position: fixed;
-    bottom: 5%;
+    top: 5%;
     right: 2%;
     z-index: 2;
     width: 200px;
@@ -244,10 +320,30 @@
 
 }
 
-td {
-    padding: 0px 10px !important;
+#backToMap2{
+    display:none;
+    
 }
 
+td {
+    padding: 5px 8px !important;
+    border: 1px solid rgb(255 255 255 / 0.5);
+}
+
+.closeButton {
+  
+
+    position: absolute;
+    top:30px;
+    right: 15px;
+    padding: 2px 6px;
+    background: rgb(255 255 255 / 0.9);
+    color: rgb(0 75 52 / 0.9);
+    font-weight: bold;
+    cursor: pointer;
+    font-size:20px;
+    display:none;
+}
  /* Scroller */
 
  /* width */
@@ -290,8 +386,54 @@ td {
         bottom: 5%;
     }
     .tooltipster-base {
-        max-height: 350px;
+        min-height: 100%;
+        
+        min-width:100%;
+        position: absolute;
+        left:0px !important;
+        top: 0px !important;
     }
+    .tooltipster-sidetip .tooltipster-content {
+        height:100%;
+    }
+
+    .tooltip-image {
+        width:280px;
+    }
+
+    #backToMap {
+        display:none;
+    }
+
+   
+
+    #closeButton {
+        position: absolute;
+        top:28px;
+        right: 15px;
+        padding: 2px 6px;
+        background: rgb(255 255 255 / 0.9);
+        color: rgb(0 75 52 / 0.9);
+        font-weight: bold;
+        cursor: pointer;
+        font-size:20px;
+        z-index:2;
+    }
+    .closeButton {
+        display:block;
+    }
+    .tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-border {
+        border-bottom-color: rgb(255 255 255 / 0);
+    }
+
+    .tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow,
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow {
+    height: 16px;
+    margin-left: 0;
+    margin-top: -8px;
+    width: 8px;
+    margin-right: 0px;
+}
 }
 
 @media only screen and (max-width: 800px) {
