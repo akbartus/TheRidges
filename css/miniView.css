@@ -4,7 +4,7 @@
 
 .tooltipster-sidetip.tooltipster-borderless .tooltipster-box {
     border: 4px solid #fff;
-    background: rgb(0 75 52 / 0.9); /*rgb(201 117 93 / 0.9); */
+    background: rgb(199 116 92 / 0.9); /*rgb(201 117 93 / 0.9); */
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-box {
@@ -102,8 +102,8 @@
     width: 50%;
 }
 .tooltipster-base {
-    max-height: 400px;
-    max-width:300px;
+    max-height: 500px;
+    max-width:500px;
 }
 .tooltip-title {
     text-align: center;
@@ -115,7 +115,7 @@
 }
 
 .tooltip-content {
-    width: 250px;
+    width: 100%;
     color: #fff;
     margin-bottom: 10px;
     font-size: 18px;
@@ -128,7 +128,7 @@
     font-style: italic;
 }
 .tooltip-image {
-    width: 250px;
+    width: 450px;
     object-fit: cover;
     border: 2px solid #fff;
     margin-top:5%;
@@ -140,7 +140,7 @@
 
 .tooltip-tour {
     position: relative;
-    background: rgb(0 75 52 / 0.9);
+    background: rgb(199 116 92);
     padding: 5px 10px;
     color: #fff;
     margin-top: -40% !important;
@@ -282,12 +282,12 @@
 }
 
 #miniview {
-    border: 2px solid #000;
+    border: 2px solid rgb(199 116 92);
 }
 
 #minimap .mainContainer {
-    transform-origin: left top 0;
-    background-color: #d2ddc6;
+    transform-origin: left top;
+    background-color: #fff;
 }
 
 #kennedyMuseum {
@@ -317,6 +317,7 @@
     width: 200px;
     object-fit: cover;
     cursor: pointer;
+    border: 2px solid rgb(199 116 92);
 
 }
 
@@ -337,7 +338,7 @@ td {
     top:30px;
     right: 15px;
     padding: 2px 6px;
-    background: rgb(255 255 255 / 0.9);
+
     color: rgb(0 75 52 / 0.9);
     font-weight: bold;
     cursor: pointer;
@@ -356,14 +357,19 @@ td {
   }
    
   /* Handle */
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #888; 
   }
   
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+  /* Firefox scroller */
+.tooltipster-content {
+    scrollbar-color: #888 #f1f1f1; 
+    scrollbar-width: thin;
+}
 
 /* Responsiveness */
 @media only screen and (max-width: 500px) {
@@ -412,8 +418,7 @@ td {
         top:28px;
         right: 15px;
         padding: 2px 6px;
-        background: rgb(255 255 255 / 0.9);
-        color: rgb(0 75 52 / 0.9);
+   
         font-weight: bold;
         cursor: pointer;
         font-size:20px;

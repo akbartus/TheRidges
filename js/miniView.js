@@ -1,6 +1,6 @@
 var miniViewObject = {
 	selector: null,
-	zoom: 0.1,
+	zoom: 0.101,
 	viewZoom: 1,
 	refresh: function (config) {
 		this.getParams(config);
@@ -160,8 +160,7 @@ function startTour() {
 			theme: 'tooltipster-borderless',
 			contentAsHTML: true,
 			trackOrigin: true,
-			//viewportAware: true,
-			//repositionOnScroll: true,
+		
 			trigger: 'click',
 			interactive: true
 		});
